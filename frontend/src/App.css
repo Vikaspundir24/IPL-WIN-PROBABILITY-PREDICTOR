@@ -213,6 +213,7 @@ body {
   gap: 8px;
 }
 
+
 .stat-label {
   font-size: 0.9em;
   color: #666;
@@ -256,5 +257,50 @@ body {
   
   .match-stats {
     grid-template-columns: 1fr;
+  }
+}
+
+.info-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-out;
+}
+
+.info-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.info-text {
+  line-height: 1.5;
+}
+
+.info-text strong {
+  font-weight: 600;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Make it responsive */
+@media (max-width: 768px) {
+  .info-banner {
+    padding: 12px 16px;
+    font-size: 14px;
   }
 }
