@@ -98,6 +98,15 @@ function App() {
           <p>Predict match outcomes using Machine Learning</p>
         </header>
 
+        {/* API Notice Banner */}
+        <div className="info-banner">
+          <div className="info-icon">ℹ️</div>
+          <div className="info-text">
+            <strong>First-time users:</strong> The API server may take 3-4 minutes to start up. 
+            Please be patient if your first prediction takes longer than usual.
+          </div>
+        </div>
+
         <div className="main-content">
           <form onSubmit={handleSubmit} className="prediction-form">
             <div className="form-row">
@@ -208,7 +217,7 @@ function App() {
 
             <div className="button-group">
               <button type="submit" className="btn btn-primary" disabled={loading}>
-                {loading ? 'Predicting...' : 'Predict Probability'}
+                {loading ? 'Predicting... (This may take a few minutes on first use)' : 'Predict Probability'}
               </button>
               <button type="button" className="btn btn-secondary" onClick={resetForm}>
                 Reset
